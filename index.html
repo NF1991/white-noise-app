@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>White Noise App</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <div class="player-container" id="playerContainer">
+        <svg
+          class="track-outline"
+          width="300px"
+          height="300px"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+              stroke="#fff"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </g>
+        </svg>
+        <svg
+          class="moving-outline"
+          width="300px"
+          height="300px"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+              stroke="#83BCD4"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </g>
+        </svg>
+        <h3 class="time-display">0:00</h3>
+
+        <audio class="song">
+          <source src="./sounds/32-Waterfall-10min.mp3" />
+        </audio>
+        <img
+          src="./components/play-button-svgrepo-com.svg"
+          alt="play"
+          class="play"
+        />
+      </div>
+      <div class="outlines"></div>
+      <div class="control-panel">
+        <div class="time-selection">
+          <button class="time-btn" data-time="120">2 Minutes</button>
+          <button class="time-btn" data-time="300">5 minutes</button>
+          <button class="time-btn" data-time="600">10 Minutes</button>
+        </div>
+        <div class="sound-selection">
+          <button
+            id="waterfallBtn"
+            data-sound="./sounds/32-Waterfall-10min.mp3"
+            alt="waterfall"
+          >
+            <img src="./components/waterfall-icon.svg" alt="" />
+          </button>
+          <button
+            id="streamBtn"
+            data-sound="./sounds/43-Stream-10min.mp3"
+            alt="stream"
+          >
+            <img
+              src="./components/river-icon.svg
+            "
+              alt=""
+            />
+          </button>
+          <button
+            id="nightBtn"
+            data-sound="./sounds/night-time-crickets-in-new-jersey-suburbs-19598.mp3"
+            alt="crickets"
+          >
+            <img src="./components/moon-icon.svg" alt="" />
+          </button>
+          <button
+            id="spaceBtn"
+            data-sound="./sounds/07-PinkNoise-10min.mp3"
+            alt="celestial"
+          >
+            <img src="./components/space-planet-icon.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./javascript/script.js"></script>
+  </body>
+</html>
